@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": false,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": false,
+    "declaration": true,
+    "declarationMap": false,
+    "lib": [
+      "es5"
+    ],
+    "downlevelIteration": true
+    //支持set等的迭代
+  },
+    "exclude": [
+      "node_modules",
+    ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "@webb/root",
+  "private": true,
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.16.0",
+    "commitizen": "^4.2.4",
+    "cz-lerna-changelog": "^2.0.3",
+    "lerna": "3.22.1"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "modules": {
+    "rules": [
+      {
+        "loader": "babel-loader",
+        "options": {
+          "rootMode": "upward"
+        }
+      }
+    ]
+  }
+}
