@@ -7,13 +7,19 @@
     "sourceMap": false,
     "declaration": true,
     "declarationMap": false,
+    "module": "commonjs",
     "lib": [
       "es5"
     ],
+    // "types": [
+    //   "node"
+    // ],
     "downlevelIteration": true
-    //支持set等的迭代
   },
-    "exclude": [
-      "node_modules",
-    ]
+  "exclude": [
+    "node_modules",
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-class-properties"
+  ]
 }

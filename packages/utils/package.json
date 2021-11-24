@@ -1,11 +1,11 @@
 {
-  "name": "@webb/util",
+  "name": "@webb/utils",
   "version": "0.0.0",
-  "description": "webb工具集node向",
+  "description": "webb工具集JaveScript向",
   "author": "qearl_ning <qearl_ning@intsig.net>",
   "homepage": "",
   "license": "ISC",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -17,10 +17,18 @@
     "registry": "http://npm.qixin007.com/"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1",
-    "tsc": "tsc --build"
+    "build:cjs": "tsc -b ./tsconfig.cjs.json",
+    "build:es": "tsc -b ./tsconfig.esm.json",
+    "build:test": "tsc -b ./tsconfig.test.json",
+    "build:types": "tsc -b ./tsconfig.types.json",
+    "build:umd": "rollup -c",
+    "build": "npm run clean && npm-run-all build:cjs build:types build:umd",
+    "clean": "rimraf lib dist es",
+    "test": "jest"
   },
-  "devDependencies": {
-    "typescript": "^4.4.4"
+  "jest": {
+    "extensionsToTreatAsEsm": [
+      ".ts"
+    ]
   }
 }

@@ -1,6 +1,11 @@
 {
   "presets": [
-    "@babel/preset-env",
-    "@babel/preset-typescript"
+    ["@babel/preset-env", 
+      {"targets": {
+        "node": "current"
+        }
+      }
+    ],
+    "@babel/preset-typescript" //Babel对Typescrip的支持是纯编译形式（无类型校验）
   ]
 }

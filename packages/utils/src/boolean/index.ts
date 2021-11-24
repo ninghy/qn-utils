@@ -6,7 +6,6 @@
 const isJindun =(accountType: string): boolean => accountType === 'B';
 
 
-export default {
-  isJindun,
-};
+export default isJindun
+
 
