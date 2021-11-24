@@ -1,4 +1,4 @@
-介于项目驱动于 pnpm 的 workspace 功能，您需要以下安装步骤
+##### 鉴于项目驱动于 pnpm 的 workspace 功能，您需要以下安装步骤
 
 1. 在项目外文件夹安装 pnpm ，当前项目禁掉 npm
 
@@ -29,7 +29,7 @@ npx -p node@14
 | npm run <cmd>    | pnpm <cmd>/pnpm run <cmd> |
 | npm install -dev | pnpm install -D           |
 
-##### 搭建进程
+##### 搭建进度
 
 ###### (~-11.28)
 
