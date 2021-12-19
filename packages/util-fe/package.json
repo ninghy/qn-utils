@@ -1,11 +1,12 @@
 {
-  "name": "@webb/util-fe",
-  "version": "0.0.0",
+  "name": "@webb/utils-fe",
+  "version": "0.0.1",
   "description": "webb工具集client向",
   "author": "qearl_ning <qearl_ning@intsig.net>",
   "homepage": "",
   "license": "ISC",
-  "main": "dist/index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -17,10 +18,20 @@
     "registry": "http://npm.qixin007.com/"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1",
-    "tsc": "tsc"
+    "build:cjs": "tsc -b ./tsconfig.cjs.json",
+    "build:es": "tsc -b ./tsconfig.esm.json",
+    "build:test": "tsc -b ./tsconfig.test.json",
+    "build:types": "tsc -b ./tsconfig.types.json",
+    "build:umd": "rollup -c",
+    "build": "npm run clean && npm-run-all build:cjs build:types build:umd",
+    "clean": "rimraf lib dist es",
+    "test": "jest"
   },
   "devDependencies": {
-    "typescript": "^4.4.4"
+    "typescript": "^4.4.4",
+    "vue": "2.6.12"
+  },
+  "peerDependencies": {
+    "vue": "2.6.12"
   }
 }
