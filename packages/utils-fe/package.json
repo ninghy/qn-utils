@@ -23,7 +23,7 @@
     "build:test": "tsc -b ./tsconfig.test.json",
     "build:types": "tsc -b ./tsconfig.types.json",
     "build:umd": "rollup -c",
-    "build": "npm run clean && npm-run-all build:cjs build:types build:umd",
+    "build": "npm run clean && npm-run-all build:es build:cjs build:types build:umd",
     "clean": "rimraf lib dist es",
     "test": "jest"
   },
@@ -33,5 +33,8 @@
   },
   "peerDependencies": {
     "vue": "2.6.12"
+  },
+  "dependencies": {
+    "@types/node": "^17.0.1"
   }
 }
