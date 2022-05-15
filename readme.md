@@ -1,3 +1,4 @@
+日常更在https://gitee.com/nhying/utils，偶尔同步GitHub 🪐
 #### 鉴于项目驱动于 pnpm 的 workspace 功能，您需要以下安装步骤
 
 1. 在项目外文件夹安装 pnpm ，当前项目禁掉 npm
